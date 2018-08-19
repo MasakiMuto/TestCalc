@@ -1,0 +1,17 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+    <Style TargetType="Button" BasedOn="{StaticResource {x:Type Button}}" x:Key="InputButton">
+        <Setter Property="Margin" Value="5" />
+    </Style>
+    <sys:Int32 x:Key="Num0">0</sys:Int32>
+    <sys:Int32 x:Key="Num1">1</sys:Int32>
+    <sys:Int32 x:Key="Num2">2</sys:Int32>
+    <sys:Int32 x:Key="Num3">3</sys:Int32>
+    <sys:Int32 x:Key="Num4">4</sys:Int32>
+    <sys:Int32 x:Key="Num5">5</sys:Int32>
+    <sys:Int32 x:Key="Num6">6</sys:Int32>
+    <sys:Int32 x:Key="Num7">7</sys:Int32>
+    <sys:Int32 x:Key="Num8">8</sys:Int32>
+    <sys:Int32 x:Key="Num9">9</sys:Int32>
+</ResourceDictionary>

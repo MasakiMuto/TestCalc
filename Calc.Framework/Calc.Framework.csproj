@@ -5,4 +5,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Calc.Core\Calc.Core.csproj" />
   </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="NotifyPropertyChangedGenerator" Version="1.1.1" />
+  </ItemGroup>
 </Project>

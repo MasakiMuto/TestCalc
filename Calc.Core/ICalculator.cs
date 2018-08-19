@@ -4,7 +4,7 @@ namespace Calc
 {
     public interface ICalculator : INotifyPropertyChanged
     {
-        void Input(int diigt);
+        void Input(int digit);
         void Input(Operator op);
         void Clear();
         

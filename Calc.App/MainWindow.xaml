@@ -4,9 +4,57 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Calc.App"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="350" Width="525"
+        d:DataContext="{d:DesignInstance local:MainWindowViewModel}">
+    <Window.DataContext>
+        <local:MainWindowViewModel />
+    </Window.DataContext>
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Generic.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+            <Style x:Key="NumInputButton" TargetType="Button" BasedOn="{StaticResource InputButton}">
+                <Setter Property="Command" Value="{Binding NumberCommand}" />
+            </Style>
+        </ResourceDictionary>
+    </Window.Resources>
+
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.ColumnSpan="4" Grid.Row="0" Text="{Binding Display.Value}" />
+
+        <Button Grid.Column="0" Grid.Row="1" Content="7" Style="{StaticResource NumInputButton}"
+                CommandParameter="{StaticResource Num7}" />
+        <Button Grid.Column="1" Grid.Row="1" Content="8" Style="{StaticResource NumInputButton}"
+                CommandParameter="{StaticResource Num8}" />
+        <Button Grid.Column="2" Grid.Row="1" Content="9" Style="{StaticResource NumInputButton}"
+                CommandParameter="{StaticResource Num9}" />
+        <Button Grid.Column="0" Grid.Row="2" Content="4" Style="{StaticResource NumInputButton}"
+                CommandParameter="{StaticResource Num4}" />
+        <Button Grid.Column="1" Grid.Row="2" Content="5" Style="{StaticResource NumInputButton}"
+                CommandParameter="{StaticResource Num5}" />
+        <Button Grid.Column="2" Grid.Row="2" Content="6" Style="{StaticResource NumInputButton}"
+                CommandParameter="{StaticResource Num6}" />
+        <Button Grid.Column="0" Grid.Row="3" Content="1" Style="{StaticResource NumInputButton}"
+                CommandParameter="{StaticResource Num1}" />
+        <Button Grid.Column="1" Grid.Row="3" Content="2" Style="{StaticResource NumInputButton}"
+                CommandParameter="{StaticResource Num2}" />
+        <Button Grid.Column="2" Grid.Row="3" Content="3" Style="{StaticResource NumInputButton}"
+                CommandParameter="{StaticResource Num3}" />
     </Grid>
 </Window>
